@@ -10,6 +10,7 @@ void main() => runApp(
             children: [
               Container(
                 width: double.infinity,
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
                   color: Colors.blue[100],
                   borderRadius: BorderRadius.circular(20),
@@ -23,6 +24,7 @@ void main() => runApp(
               ),
               Container(
                 width: double.infinity,
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
                   color: Colors.blue[300],
                   borderRadius: BorderRadius.circular(20),
@@ -36,6 +38,7 @@ void main() => runApp(
               ),
               Container(
                 width: double.infinity,
+                margin: const EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
                   color: Colors.blue[600],
                   borderRadius: BorderRadius.circular(20),
