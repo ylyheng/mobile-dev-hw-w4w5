@@ -25,31 +25,41 @@ void main() => runApp(
               child: Center(child: Text('My hobbies!!!')),
             ),
           ),
-          SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(12),
+
+          // two boxes
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(child: Text('Soccer')),
+                  ),
                 ),
-                child: Center(child: Text('Soccer')),
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.blueGrey,
-                  borderRadius: BorderRadius.circular(12),
+                SizedBox(width: 16),
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(child: Text('Game')),
+                  ),
                 ),
-                child: Center(child: Text('Game')),
-              ),
-            ],
+              ],
+            ),
           ),
+
+          // empty space
           Expanded(child: Container()),
+
+          // bottom bar
           Container(
             width: double.infinity,
             height: 70,
