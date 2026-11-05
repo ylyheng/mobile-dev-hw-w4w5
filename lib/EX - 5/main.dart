@@ -1,78 +1,91 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome !'),
-          centerTitle: true,
-          backgroundColor: Colors.deepOrange,
-          foregroundColor: Colors.white,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: const Text(
-                  'My hobbies',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 70,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Colors.orange[200],
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: const Text('Soccer'),
-                    ),
-                  ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Container(
-                      height: 70,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Colors.deepOrange[800],
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: const Text(
-                        'Flutter',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+void main() => runApp(
+  MaterialApp(
+    home: Scaffold(
+      body: Column(
+        children: [
+          //top bar
+          Container(
+            width: double.infinity,
+            height: 80,
+            decoration: BoxDecoration(
+              color: Colors.deepOrange,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Center(child: Text("Welcome!!!!")),
           ),
-        ),
-        bottomNavigationBar: Container(
-          height: 64,
-          color: Colors.deepOrange,
-          child: const Row(
+
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: Container(
+              width: double.infinity,
+              height: 60,
+              color: Colors.red,
+              child: Center(child: Text('My hobbies!!!')),
+            ),
+          ),
+          SizedBox(height: 16),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(Icons.circle, color: Colors.white),
-              Icon(Icons.circle, color: Colors.white),
-              Icon(Icons.circle, color: Colors.white),
+              Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(child: Text('Soccer')),
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(child: Text('Game')),
+              ),
             ],
           ),
-        ),
+          Expanded(child: Container()),
+          Container(
+            width: double.infinity,
+            height: 70,
+            color: Colors.deepOrange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     ),
-  );
-}
+  ),
+);
